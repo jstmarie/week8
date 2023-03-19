@@ -15,25 +15,25 @@ public class StepDefinitions {
 
     private String a;
     private String b;
-    private String result;
+    // private String result;
     private String quotient;
 
-    @Given("^I have two numbers: (.*) and (.*)$")
-    public void i_have_two_numbers(String a, String b) throws Throwable {
-        this.a = a;
-        this.b = b;
-    }
+    // @Given("^I have two numbers: (.*) and (.*)$")
+    // public void i_have_two_numbers(String a, String b) throws Throwable {
+    //     this.a = a;
+    //     this.b = b;
+    // }
 
-    @When("^the calculator sums them$")
-    public void the_calculator_sums_them() throws Throwable {
-        String url = String.format("%s/sum?a=%s&b=%s", server, a, b);
-        result = restTemplate.getForObject(url, String.class);
-    }
+    // @When("^the calculator sums them$")
+    // public void the_calculator_sums_them() throws Throwable {
+    //     String url = String.format("%s/sum?a=%s&b=%s", server, a, b);
+    //     result = restTemplate.getForObject(url, String.class);
+    // }
 
-    @Then("^I receive (.*) as a result$")
-    public void i_receive_as_a_result(String expectedResult) throws Throwable {
-        assertEquals(expectedResult, result);
-    }
+    // @Then("^I receive (.*) as a result$")
+    // public void i_receive_as_a_result(String expectedResult) throws Throwable {
+    //     assertEquals(expectedResult, result);
+    // }
 
     //Test for division
     @Given("^I have dividend and divisor: (.*) and (.*)$")
