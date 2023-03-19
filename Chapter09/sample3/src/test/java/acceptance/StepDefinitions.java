@@ -16,6 +16,9 @@ public class StepDefinitions {
     private String a;
     private String b;
     private String result;
+    private String divident;
+    private String divisor;
+    private String quotient;
 
     @Given("^I have two numbers: (.*) and (.*)$")
     public void i_have_two_numbers(String a, String b) throws Throwable {
@@ -36,19 +39,19 @@ public class StepDefinitions {
 
     //divide
     @Given("^I have a dividend and divisor: (.*) and (.*)$")
-    public void i_have_a_dividend_and_divisor(String a, String b) throws Throwable {
-        this.a = a;
-        this.b = b;
+    public void i_have_a_dividend_and_divisor(String divisor, String dividend) throws Throwable {
+        this.divisor = divisor;
+        this.dividend = dividend;
     }
 
     @When("^the calculator divides them$")
     public void the_calculator_divides_them() throws Throwable {
         String url = String.format("%s/div?a=%s&b=%s", server, a, b);
-        result = restTemplate.getForObject(url, String.class);
+        quotient = restTemplate.getForObject(url, String.class);
     }
 
     @Then("^the quotient is (.*)$")
     public void the_quotient_is(String expectedResult) throws Throwable {
-        assertEquals(expectedResult, result);
+        assertEquals(expectedResult, quotient);
     }
 }
