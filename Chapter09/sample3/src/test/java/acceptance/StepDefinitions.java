@@ -35,11 +35,11 @@ public class StepDefinitions {
     }
 
     // Test for division
-    @Given("^I have two numbers: (.*) and (.*)$")
-    public void i_have_two_numbers(String a, String b) throws Throwable {
-        this.a = a;
-        this.b = b;
-    }
+    // @Given("^I have two numbers: (.*) and (.*)$")
+    // public void i_have_two_numbers(String a, String b) throws Throwable {
+    //     this.a = a;
+    //     this.b = b;
+    // }
 
     @When("^the calculator divides them$")
     public void the_calculator_divides_them() throws Throwable {
@@ -47,8 +47,8 @@ public class StepDefinitions {
         result = restTemplate.getForObject(url, String.class);
     }
 
-    @Then("^I receive (.*) as a result$")
-    public void i_receive_as_a_result(String expectedResult) throws Throwable {
-        assertEquals(expectedResult, result);
-    }
+    // @Then("^I receive (.*) as a result$")
+    // public void i_receive_as_a_result(String expectedResult) throws Throwable {
+    //     assertEquals(expectedResult, result);
+    // }
 }
