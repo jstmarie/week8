@@ -48,7 +48,7 @@ public class StepDefinitions {
     }
 
     @Then("^the quotient is (.*)$")
-    public void i_receive_as_a_result(String expectedResult) throws Throwable {
+    public void the_quotient_is(String expectedResult) throws Throwable {
         assertEquals(expectedResult, result);
     }
 }
