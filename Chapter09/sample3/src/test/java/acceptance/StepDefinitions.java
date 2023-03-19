@@ -12,6 +12,7 @@ public class StepDefinitions {
     private String server = System.getProperty("calculator.url");
 
     private RestTemplate restTemplate = new RestTemplate();
+    private RestTemplate restTemplate2 = new RestTemplate();
 
     private String a;
     private String b;
@@ -46,8 +47,8 @@ public class StepDefinitions {
 
     @When("^the calculator divides them$")
     public void the_calculator_divides_them() throws Throwable {
-        String url = String.format("%s/div?a=%s&b=%s", server, a, b);
-        quotient = restTemplate.getForObject(url, String.class);
+        String url = String.format("%s/div?a=%s&b=%s", server, divisor, dividend);
+        quotient = restTemplate2.getForObject(url, String.class);
     }
 
     @Then("^the quotient is (.*)$")
