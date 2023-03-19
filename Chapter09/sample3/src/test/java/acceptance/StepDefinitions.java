@@ -47,7 +47,7 @@ public class StepDefinitions {
     @When("^the calculator divides them$")
     public void the_calculator_divides_them() throws Throwable {
         String url = String.format("%s/div?a=%s&b=%s", server, c, d);
-        result = restTemplate.getForObject(url, String.class);
+        quotient = restTemplate.getForObject(url, String.class);
     }
     
     @Then("^I receive (.*) as the quotient$")
