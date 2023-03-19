@@ -51,5 +51,6 @@ public class StepDefinitions {
     @Then("^I receive (.*) as the quotient$")
     public void i_receive_as_the_quotient(String expectedResult) throws Throwable {
         assertEquals(expectedResult, quotient);
+        System.out.println("Expected: ", expectedResult, " Got: ", quotient);
     }
 }
