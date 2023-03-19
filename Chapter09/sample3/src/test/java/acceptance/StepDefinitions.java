@@ -16,7 +16,7 @@ public class StepDefinitions {
     private String a;
     private String b;
     private String result;
-    private String divident;
+    private String dividend;
     private String divisor;
     private String quotient;
 
