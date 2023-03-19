@@ -16,6 +16,7 @@ public class StepDefinitions {
     private String a;
     private String b;
     private String result;
+    private String quotient;
 
     @Given("^I have two numbers: (.*) and (.*)$")
     public void i_have_two_numbers(String a, String b) throws Throwable {
@@ -47,9 +48,8 @@ public class StepDefinitions {
         result = restTemplate.getForObject(url, String.class);
     }
     
-
     @Then("^I receive (.*) as the quotient$")
     public void i_receive_as_the_quotient(String expectedResult) throws Throwable {
-        assertEquals(expectedResult, result);
+        assertEquals(expectedResult, quotient);
     }
 }
