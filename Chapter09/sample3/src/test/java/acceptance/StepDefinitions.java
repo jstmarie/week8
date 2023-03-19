@@ -36,7 +36,7 @@ public class StepDefinitions {
 
     //Test for division
     @Given("^I have dividend and divisor: (.*) and (.*)$")
-    public void i_have_two_numbers(String a, String b) throws Throwable {
+    public void i_have_dividend_and_divisor(String a, String b) throws Throwable {
         this.a = a;
         this.b = b;
     }
@@ -49,7 +49,7 @@ public class StepDefinitions {
     
 
     @Then("^I receive (.*) as the quotient$")
-    public void i_receive_as_a_result(String expectedResult) throws Throwable {
+    public void i_receive_as_the_quotient(String expectedResult) throws Throwable {
         assertEquals(expectedResult, result);
     }
 }
