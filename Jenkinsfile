@@ -13,7 +13,7 @@ podTemplate(yaml: '''
 ''') {
   node(POD_LABEL) {
     stage('Calculator Acceptance Testing') {
-      git 'https://github.com/jstmarie/week8.git'
+      git branch: 'main', url: 'https://github.com/jstmarie/week8.git'
       container('gradle') {
 
         stage('Build calculator') {
